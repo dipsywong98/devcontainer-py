@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = "sample devcontainer repo"
+authors = ["Dipsy"]
+readme = "README.md"
+packages = [{ include = "server", from = "src" }]
+
+[tool.poetry.dependencies]
+python="^3.12"
+fastapi = "0.110.1"
+uvicorn = "^0.29.0"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.20.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "server.main:start"
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]

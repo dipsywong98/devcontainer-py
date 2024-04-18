@@ -1,0 +1,24 @@
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes:
+      - source: ..
+        target: /app
+        type: bind
+    environment:
+      PLACEHOLDER: value
+    networks:
+      - app
+
+  mongo:
+    image: mongo:latest
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
+    name: app-network
