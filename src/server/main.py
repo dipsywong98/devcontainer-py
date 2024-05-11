@@ -1,9 +1,18 @@
 from fastapi import FastAPI
-import uvicorn  
-app = FastAPI()   
-@app.get("/") 
-async def main_route():     
-  return {"message": "Hey, It is me Goku"}
+import uvicorn
+
+app = FastAPI()
+
+
+@app.get("/ping")
+async def ping_route():
+    return {"message": "pong"}
+
+
+@app.get("/")
+async def main_route():
+    return {"message": "Hey, It is me Goku"}
+
 
 def start():
     """Launched with `poetry run start` at root level"""

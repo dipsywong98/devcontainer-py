@@ -1,10 +1,10 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-  "name": "app",
+  "name": "app-name",
   "dockerComposeFile": "docker-compose.yaml",
   "service": "devcontainer",
-  "workspaceFolder": "/app",
+  "workspaceFolder": "/app-name/",
   "postCreateCommand": "bash -i .devcontainer/startup.sh",
   "mounts": [
     "type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/vscode/.ssh,readonly"
@@ -35,7 +35,9 @@
       "extensions": [
         "ms-python.vscode-pylance",
         "ms-python.python",
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "charliermarsh.ruff",
+        "tamasfe.even-better-toml"
       ]
     }
   },
