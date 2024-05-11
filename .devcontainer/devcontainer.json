@@ -18,6 +18,7 @@
 			"plugins": "git man python zsh-syntax-highlighting zsh-autosuggestions",
 			"omzPlugins": "https://github.com/zsh-users/zsh-syntax-highlighting.git https://github.com/zsh-users/zsh-autosuggestions.git"
 		},
+    "ghcr.io/hwaien/devcontainer-features/match-host-time-zone": {}
   },
   // Configure tool-specific properties.
   "customizations": {
