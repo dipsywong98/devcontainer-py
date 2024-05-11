@@ -6,19 +6,19 @@ services:
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
       - source: ..
-        target: /app
+        target: /app-name
         type: bind
     environment:
       PLACEHOLDER: value
     networks:
-      - app
+      - app-name
 
   mongo:
     image: mongo:latest
     networks:
-      - app
+      - app-name
 
 networks:
-  app:
+  app-name:
     driver: bridge
-    name: app-network
+    name: app-name-network

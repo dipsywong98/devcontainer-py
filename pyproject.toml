@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "app"
+name = "app-name"
 version = "0.1.0"
 description = "sample devcontainer repo"
 authors = ["Dipsy"]
